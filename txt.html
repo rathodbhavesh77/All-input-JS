@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form1">
+      First Name : <input type="text" name="firstName" value="Bhavesh" /> <br />
+      Second Name : <input type="text" name="secondName" value="Rathod" /><br />
+    </form>
+    <p id="para"></p>
+
+    <script>
+      function showText() {
+        let firstName = document.querySelector('[name="firstName"]').value;
+        let secondName = document.querySelector('[name="secondName"]').value;
+        let allnames = " " + firstName + " " + secondName + " ";
+        var p = document.getElementById("para");
+        p.innerText = p.innerText + allnames;
+        console.log(allnames);
+      }
+    </script>
+    <br />
+    <button onclick="showText()">Show Values</button>
+  </body>
+</html>
